@@ -2,27 +2,11 @@ import React from 'react';
 import { Modal, ModalHeader, ModalBody, FormGroup, Label, NavbarBrand } from 'reactstrap';
 
 const photos = [
-  { src: '/images/gatsby-icon.png' },
-  { src: '/images/ned.jpeg' },
-  { src: '/images/devilgirl.jpg' },
-  { src: '/images/trump.jpeg' },
-  { src: '/images/one-does-not.jpg' },
-  { src: '/images/dank.png' },
-  { src: '/images/boy.png' },
-  { src: '/images/sad.png' },
-  { src: '/images/wolf.png' },
-  { src: '/images/fry.jpg' },
-  { src: '/images/jobs.jpg' },
-  { src: '/images/phone.jpg' },
-  { src: '/images/oldie.png' },
-  { src: '/images/image.png' },
-  { src: '/images/doubt.png' },
-  { src: '/images/crying.png' },
-  { src: '/images/sponge.png' },
-  { src: '/images/dog.png' },
-  { src: '/images/frust.png' },
-  { src: '/images/web.png' },
-  { src: '/images/penguin.png' }
+  { src: '/images/crazy.jpg' },
+  { src: '/images/meme.jpeg' },
+  { src: '/images/stewie.png' },
+  { src: '/images/stewie.png' },
+  { src: '/images/stewie.png' }
 ];
 
 const initialState = {
@@ -175,19 +159,9 @@ class MainPage extends React.Component {
     return (
       <div>
         <div className="main-content">
-          <div className="sidebar">
-            <NavbarBrand href="/">Make-a-Meme</NavbarBrand>
-            <p>
-              This is a fun 5 hour project inspired by imgur. Built with React.
-            </p>
-            <p>
-              You can add top and bottom text to a meme-template, move the text around and can save the image by downloading it.
-            </p>
-          </div>
           <div className="content">
             {photos.map((image, index) => (
               <div className="image-holder" key={image.src}>
-                <span className="meme-top-caption">Top text</span>
                 <img
                   style={{
                     width: "100%",
@@ -199,12 +173,13 @@ class MainPage extends React.Component {
                   onClick={() => this.openImage(index)}
                   role="presentation"
                 />
-              <span className="meme-bottom-caption">Bottom text</span>
+            
               </div>
             ))}
           </div>
         </div>
         <Modal className="meme-gen-modal" isOpen={this.state.modalIsOpen}>
+        
           <ModalHeader toggle={this.toggle}>Make-a-Meme</ModalHeader>
           <ModalBody>
             <svg
