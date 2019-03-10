@@ -1,20 +1,22 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { Flex } from 'rebass';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { HeaderBase } from 'rebass'
+import styled from 'styled-components'
 
-
-
-const Display = styled(Flex)`
-    background-color: #9FB5A8;  
-    margin-bottom: 1px;
-`;
+const Reset = styled(HeaderBase)`
+  background: red;
+  box-shadow: 5px 10px;
+  font-weight: normal;
+  padding-top: 20px 
+  padding-bottom: 10px
+  border-radius: 0;
+  cursor: pointer;
+`
 
 export const Header = ({ children, ...props }) => (
-  <Display {...props}>{children}</Display>
+  <Reset {...props}>{children}</Reset>
 )
 
-
-
-
-export default Header;
+Header.propTypes = {
+  children: PropTypes.node.isRequired
+}
