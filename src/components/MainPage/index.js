@@ -1,12 +1,12 @@
 import React from 'react';
-import { Modal, ModalHeader, ModalBody, FormGroup, Label, NavbarBrand } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, FormGroup, Label } from 'reactstrap';
 
 const photos = [
   { src: '/images/crazy.jpg' },
   { src: '/images/meme.jpeg' },
   { src: '/images/stewie.png' },
-  { src: '/images/stewie.png' },
-  { src: '/images/stewie.png' }
+  { src: '/images/childish.jpg' },
+  { src: '/images/childishtwo.jpg' }
 ];
 
 const initialState = {
