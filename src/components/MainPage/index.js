@@ -1,5 +1,7 @@
 import React from 'react';
 import { Modal, ModalHeader, ModalBody, FormGroup, Label } from 'reactstrap';
+import { Button, IconButton} from '../Element/Button'
+import { DownloadCloud } from 'styled-icons/feather'
 
 const photos = [
   { src: '/images/crazy.jpg' },
@@ -227,7 +229,8 @@ class MainPage extends React.Component {
                 <Label for="bottomtext">Bottom Text</Label>
                 <input className="form-control" type="text" name="bottomtext" id="bottomtext" placeholder="Add text to the bottom" onChange={this.changeText} />
               </FormGroup>
-              <button onClick={() => this.convertSvgToImage()} className="btn btn-primary">Download Meme!</button>
+              <Button variant="primary">Generate Meme!</Button>
+              <IconButton icon={<DownloadCloud />} />
             </div>
           </ModalBody>
         </Modal>
