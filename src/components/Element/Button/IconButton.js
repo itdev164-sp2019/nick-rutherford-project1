@@ -4,7 +4,10 @@ import styled from 'styled-components'
 import { ButtonBase } from './ButtonBase'
 
 const StyledButton = styled(ButtonBase)`
-  ${props => props.theme.variants.iconButton[props.variant || 'primary']};
+box-shadow: 5px 10px;
+font-weight: normal;
+padding-top: 20px 
+padding-bottom: 10px
 `
 
 export const IconButton = styled(({ icon, ...props }) => {
